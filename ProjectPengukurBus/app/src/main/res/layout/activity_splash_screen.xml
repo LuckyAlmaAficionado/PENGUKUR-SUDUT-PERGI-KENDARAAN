@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/level_1"
+    app:layoutDescription="@xml/activity_splash_screen_scene"
+    tools:context=".SplashScreenActivity">
+
+    <ImageView
+        android:id="@+id/imgPerhub"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="60dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/perhub"
+        app:layout_constraintEnd_toStartOf="@id/imagePkj"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imagePkj" />
+
+    <ImageView
+        android:id="@+id/imagePkj"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="400dp"
+        android:src="@drawable/pkj"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nexa_bold"
+        android:text="PENGUKUR SUDUT \nPERGI KENDARAAN"
+        android:textAlignment="center"
+        android:textColor="@color/level_2"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="571dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="sans-serif"
+        android:text="© 2023 Made By Trenaedi Nafi Al Faris"
+        android:textAlignment="center"
+        android:textColor="@color/level_2"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

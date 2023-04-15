@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CameraActivity">
+
+
+    <TextureView
+        android:id="@+id/textureView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/check"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/nexa_bold"
+            android:rotation="90"
+            app:layout_constraintBottom_toBottomOf="@+id/protractorview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/protractorview" />
+
+        <TextView
+            android:id="@+id/derajat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="90"
+            android:text="0"
+            android:fontFamily="@font/nexa_bold"
+            android:textSize="50sp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/protractorview"
+            app:layout_constraintEnd_toEndOf="@+id/viewbusur"
+            app:layout_constraintHorizontal_bias="0.237"
+            app:layout_constraintStart_toEndOf="@+id/check"
+            app:layout_constraintTop_toTopOf="@+id/protractorview"
+            app:layout_constraintVertical_bias="0.498" />
+
+        <View
+            android:id="@+id/viewbusur"
+            android:layout_width="450dp"
+            android:layout_height="3dp"
+            android:layout_marginEnd="499dp"
+            android:background="#7C39FF00"
+            android:rotation="90"
+            app:layout_constraintBottom_toBottomOf="@+id/protractorview"
+            app:layout_constraintEnd_toEndOf="@+id/protractorview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/protractorview" />
+
+        <View
+            android:layout_width="450dp"
+            android:layout_height="3dp"
+            android:layout_marginEnd="499dp"
+            android:background="@color/black"
+            android:rotation="90"
+            app:layout_constraintBottom_toBottomOf="@+id/protractorview"
+            app:layout_constraintEnd_toEndOf="@+id/protractorview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/protractorview" />
+
+        <com.goodiebag.protractorview.ProtractorView
+            android:id="@+id/protractorview"
+            android:layout_width="876dp"
+            android:layout_height="528dp"
+            android:rotation="90"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:textProgressColor="#FF00"
+            app:tickProgressColor="#abe6" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btnCapture"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="11dp"
+        android:background="#000000"
+        app:cardCornerRadius="100dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:rotation="90"
+                android:src="@drawable/ic_camera" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
